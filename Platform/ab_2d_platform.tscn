@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://caodbovb1ivli"]
+
+[ext_resource type="Texture2D" uid="uid://drc27g86ptldy" path="res://Tileset.png" id="2_dfjc1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfjc1"]
+size = Vector2(62, 22)
+
+[node name="Ab2DPlatform" type="AnimatableBody2D" unique_id=764236299]
+collision_mask = 0
+sync_to_physics = false
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=798032997]
+position = Vector2(0, 20)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_dfjc1")
+region_enabled = true
+region_rect = Rect2(640, 512, 128, 128)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=351804600]
+shape = SubResource("RectangleShape2D_dfjc1")
+one_way_collision = true
