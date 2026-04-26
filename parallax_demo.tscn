@@ -320,19 +320,6 @@ tile_set = SubResource("TileSet_ur1rj")
 [node name="Player" parent="." unique_id=900287392 instance=ExtResource("3_icwdo")]
 position = Vector2(-511, 196)
 
-[node name="Camera" type="Camera2D" parent="." unique_id=415199065 node_paths=PackedStringArray("target")]
-process_physics_priority = 1
-zoom = Vector2(1.25, 1.25)
-process_callback = 0
-limit_left = -640
-limit_top = -512
-limit_right = 1984
-limit_bottom = 296
-position_smoothing_enabled = true
-position_smoothing_speed = 2.0
-script = ExtResource("1_orljg")
-target = NodePath("../Player")
-
 [node name="DepthPortal" type="Area2D" parent="." unique_id=124550722]
 z_index = -1
 position = Vector2(-256, 200)
@@ -349,5 +336,19 @@ region_rect = Rect2(512, 256, 128, 128)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DepthPortal" unique_id=225931950]
 shape = SubResource("CircleShape2D_j0l5j")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=415199065 node_paths=PackedStringArray("target")]
+process_physics_priority = 1
+physics_interpolation_mode = 1
+zoom = Vector2(1.25, 1.25)
+process_callback = 0
+limit_left = -640
+limit_top = -512
+limit_right = 1984
+limit_bottom = 296
+position_smoothing_enabled = true
+position_smoothing_speed = 2.0
+script = ExtResource("1_orljg")
+target = NodePath("../Player")
 
 [connection signal="body_entered" from="DepthPortal" to="DepthHandler" method="_on_depth_portal_body_entered"]
