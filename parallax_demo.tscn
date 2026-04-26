@@ -277,6 +277,7 @@ bg_layer = NodePath("../ParallaxLayers/Parallax2D/BGLayer")
 [node name="ParallaxLayers" type="Node2D" parent="." unique_id=999848724]
 
 [node name="Parallax2D" type="Parallax2D" parent="ParallaxLayers" unique_id=2018805711]
+physics_interpolation_mode = 0
 scroll_scale = Vector2(0.5, 1)
 
 [node name="BGLayer" type="TileMapLayer" parent="ParallaxLayers/Parallax2D" unique_id=676950065]
@@ -321,6 +322,8 @@ position = Vector2(-511, 196)
 
 [node name="Camera" type="Camera2D" parent="." unique_id=415199065 node_paths=PackedStringArray("target")]
 process_physics_priority = 1
+zoom = Vector2(1.25, 1.25)
+process_callback = 0
 limit_left = -640
 limit_top = -512
 limit_right = 1984
