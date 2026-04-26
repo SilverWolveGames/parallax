@@ -7,7 +7,6 @@ size = Vector2(62, 22)
 
 [node name="Ab2DPlatform" type="AnimatableBody2D" unique_id=764236299]
 collision_mask = 0
-sync_to_physics = false
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=798032997]
 position = Vector2(0, 20)
